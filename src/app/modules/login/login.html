@@ -1,0 +1,73 @@
+<div class="login-page">
+
+  <div class="container text-center">
+
+    <h1 style="color:white;">Kujui</h1>
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+         <br>
+        <div class="demo">
+        <p>For demo purposes, you can download a <a href="http://landstead.atraurablockchain.com/this_is_a_test_wallet.wlt">test wallet to import here</a>.
+         <br> <b>Password:</b> this is a test wallet</p>
+        </div>
+
+        <select class="form-control" style="outline:0;display:initial;" ng-model="$ctrl.selectedWallet" ng-options="wallet.name group by (wallet.accounts[0].network | toNetworkName) for wallet in $ctrl._storage.wallets">
+            <option value="" disabled selected>{{ 'LOGIN_SELECT_WALLET' | translate }}</option>
+        </select>
+        <div class="form-group">
+          <input class="form-control" type="password" ng-model="$ctrl.common.password" placeholder="{{ 'FORM_PASSWORD_FIELD_PLACEHOLDER' | translate }}" style="margin-top: 5px"/>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group center">
+          <div class="fileUpload btn btn-lg btn-import btn-outline" style="outline:0; margin-right: 10px;">
+           <span>{{ 'LOGIN_IMPORT_BUTTON' | translate }}</span>
+              <input type="file" class="upload" multiple='multiple' read-wallet-files="$ctrl.loadWallet($fileContent, $isNCC)" />
+      </div>
+         <button class="btn btn-lg btn-success"
+              type="submit" ng-click="$ctrl.login($ctrl.selectedWallet)" ng-disabled="!$ctrl.selectedWallet">
+              {{ 'LOGIN_LOGIN_BUTTON' | translate }}
+            </button>
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+<a id="downloadWallet" style="visibility:hidden" target="_blank"></a>
+
+</div>
+
+<!-- Upgrade account Modal -->
+<div id="upgradeWallet" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">{{ 'LOGIN_UPGRADE_TITLE' | translate }}</h4>
+      </div>
+      <p class="bg-danger" style="padding:10px;margin:0;">
+        <i class="fa fa-exclamation-triangle"></i> <span ng-bind-html="'LOGIN_UPGRADE_MESSAGE' | translate"></span>
+      </p>
+      <div class="modal-body">
+       <fieldset class="form-group">
+              <input class="form-control form-control-lg"
+                type="password"
+                placeholder="{{ 'FORM_PASSWORD_FIELD_PLACEHOLDER' | translate }}"
+                ng-model="$ctrl.common.password"/>
+            </fieldset>
+
+            <button class="btn btn-success" style="border-radius:0px;"
+              type="submit" ng-disabled="$ctrl.okPressed || !$ctrl.common.password.length" ng-click="$ctrl.upgradeWallet()">
+              {{ 'LOGIN_UPGRADE_BUTTON' | translate }}
+            </button> 
+      </div>
+    </div>
+
+  </div>
+</div>

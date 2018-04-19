@@ -1,0 +1,66 @@
+<div class="Landstead-page">
+   <div class="banner-left">
+      <div class="container">
+      </div>
+   </div>
+   <div class="container-fluid">
+      <div class="row portalWrap">
+         <div class="col-md-12">
+            <h2>Citizen Registration</h2>
+         </div>
+      </div>
+      <div class="row row1">
+         <!-- Your content here -->
+         <div class="col-md-6" style="margin-top:10px">
+            <div class="panel panel-default">
+               <div class="panel-heading" style="background-color: rgb(68, 68, 68); color: white;border-radius: 0px; color: #333">
+                  <i class="fa fa-chevron-right"></i> Register a citizen on the blockchain
+               </div>
+               <div class="panel-body">
+                  <!-- Password Field -->
+                  <label>Enter the account's password</label><br/>
+                  <input class="form-control form-control-lg" type="password" placeholder="{{ 'FORM_PASSWORD_FIELD_PLACEHOLDER' | translate }}" ng-model="$ctrl.common.password" />
+                  <br/>
+                  <label>Input the citizen's Identification Number</label><br/>
+                  <input type="text" class="form-control" ng-model="$ctrl.citizenID" value=""></input>
+                  <br/>
+
+                  <label>Input the citizen’s Specific Information (Firstname Lastname, Date of birth) </label><br/>
+                  <input type="text" class="form-control" ng-model="$ctrl.citizenInfo" value=""></input>
+                  <br/>
+
+                  <label>Input the citizen's Account</label><br/>	
+                  <!-- <input class="form-control form-control-lg" type="text" placeholder="{{'FORM_RECIPIENT_PLACEHOLDER' | translate}}" ng-model="$ctrl.citizenAccount" ng-model-options="{debounce:500}" ng-change="$ctrl.checkAccount()"/> -->
+                  <input class="form-control form-control-lg" type="text" placeholder="{{'FORM_ADDRESS_FIELD_PLACEHOLDER' | translate}}" ng-model="$ctrl.citizenAccount"/>
+                  <br/>
+                  <button ng-click="$ctrl.submit()" ng-disabled="$ctrl.buttonDisabled" class="btn btn-lg btn-success">Send</button>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-4">
+            <div class="panel panel-default">
+               <div class="panel-heading" style="background-color: rgb(68, 68, 68); color: white;border-radius: 0px; color: #333">
+                  <i class="fa fa-chevron-right"></i> Status
+               </div>
+               <div class="panel-body">
+                  <ul>
+                     <li>
+                        Starting registration for atlantis citizen:</br>
+                        {{ $ctrl.citizenID }}:{{$ctrl.citizenInfo}}:{{ $ctrl.country}}
+                     </li>
+                     <hr/>
+                     <li class="succeed" ng-if="$ctrl.step.bwCreated">Registration determined for atlantis citizen:<br/>{{ $ctrl.cpAccount }}</li>
+                     <li class="succeed" ng-if="$ctrl.step.cpLinked">Registration linked to citizen account: OK!</li>
+                     <li class="succeed" ng-if="$ctrl.step.tokensToCP">Registration validated: OK!</li>
+                     <li class="succeed" ng-if="$ctrl.step.tokensToC">Citizen account validated: OK!</li>
+                     <li class="succeed" ng-if="$ctrl.step.cpOwned">Setting {{ $ctrl.country }} ownership of citizen registration: OK!</li>
+                     <li class="succeed" style="font-size: bigger;" ng-if="$ctrl.step.success">Registration for {{ $ctrl.country }} citizen completed Successfully!</li>
+
+
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
