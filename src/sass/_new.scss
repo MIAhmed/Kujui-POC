@@ -167,56 +167,69 @@ textarea {
   padding-right: $pad;
 
 }
-.portalWrap{
-  .row1 {
-    padding-bottom: $pad * 2;
-  }
-  .panel-heading {
-    border-bottom: 0px !important;
-    h5 {
-      font-size: 19px;
-      font-weight: 700;
+.portalWrap {
+    .row1 {
+        padding-bottom: $pad * 2;
     }
-    i {
-      vertical-align: middle;
-    }
-    img {
-      width: 56px;
-      // vertical-align: bottom;
 
+    .panel-heading {
+        border-bottom: 0px !important;
+
+        h5 {
+            font-size: 19px;
+            font-weight: 700;
+        }
+
+        i {
+            vertical-align: middle;
+        }
+
+        img {
+            width: 56px;
+            // vertical-align: bottom;
+        }
+
+        .col-sm-3 {
+            min-height: 60px;
+        }
+
+        .col-sm-9 {
+            border-bottom: 3px solid #38B9A1;
+            width: 50%;
+        }
     }
-    .col-sm-3 {
-      min-height: 60px;
+
+    .panel-body {
+        padding: 0px;
+        padding-top: $pad;
+        padding-bottom: $pad;
+        /*border-top: 1px solid $blue;*/
+        line-height: 1.1;
+        font-size: 13.5px;
+        color: rgba(0,0,0,0.4);
+        font-weight: 700;
     }
-  }
-  .panel-body {
-    padding: 0px;
-    padding-top: $pad;
-    padding-bottom: $pad;
-    border-top: 1px solid $blue;
-    line-height: 1.1;
-    font-size: 13.5px;
-    color: rgba(0,0,0,0.4);
-    font-weight: 700;
-  }
-  .panelFooter {
-    background-color: transparent;
-    border: 0px;
-    box-shadow: none;
-    padding: 0px;
-    .btn {
-      text-decoration: underline !important;
-      color: $blue;
-      font-size: 13.5px;
-      padding: 0px !important;
-      margin: 0px !important;
-      text-align: left;
-      background-color: transparent;
+
+    .panelFooter {
+        background-color: transparent;
+        border: 0px;
+        box-shadow: none;
+        padding: 0px;
+
+        .btn {
+            text-decoration: underline !important;
+            color: $blue;
+            font-size: 13.5px;
+            padding: 0px !important;
+            margin: 0px !important;
+            text-align: left;
+            background-color: transparent;
+        }
+
+        .btn[disabled] {
+            color: rgba(0,0,0,0.7);
+        }
     }
-    .btn[disabled] {
-      color: rgba(0,0,0,0.7);
-    }
-  }
 }
 
 /*** CREATE MOSAIC PAGE ***/
@@ -252,13 +265,16 @@ textarea {
 	padding-bottom: 0px;
 	background-color: transparent;
   padding-top: $pad / 2;
-}
+}`
 // main heading on page, h2
 .dashboard-page h2, .transferTransaction-page h2, h2 {
-	color: rgba(0, 0, 0, 0.3);
-	font-size: 55px;
-	font-weight: 100;
-  text-align: left;
+    /*font-size: 55px;
+    font-weight: 100;*/
+    text-align: left;
+    /*color: rgba(0, 0, 0, 0.3);*/
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 20px;
 }
 
 .dashboard-page .updates {

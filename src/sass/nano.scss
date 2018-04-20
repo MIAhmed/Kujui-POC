@@ -656,6 +656,14 @@ border: 1px solid #444;
 	margin-top: 10px;
 }
 
+.services-page .col-sm-3 {
+    width: auto;
+}
+
+.services-page .fa {
+    color: #38B9A1;
+}
+
 .noPaddingLeft {
 	padding-left: 0px;
 }
@@ -955,6 +963,10 @@ border-bottom-color: transparent;
 
 .dashboard-page .list-group.list-group-root > .list-group > .list-group-item {
   padding-left: 30px;
+}
+
+.dashboard-page .list-group.list-group-root > .list-group > .list-group > .list-group-item {
+  padding-left: 45px;
 }
 
 .dashboard-page .list-group.list-group-root > .list-group > .list-group > .list-group-item {

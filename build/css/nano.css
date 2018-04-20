@@ -494,6 +494,12 @@ border: 1px solid #444;
   /*padding: 0px;*/
   margin-top: 10px; }
 
+.services-page .col-sm-3 {
+  width: auto; }
+
+.services-page .fa {
+  color: #38B9A1; }
+
 .noPaddingLeft {
   padding-left: 0px; }
 
@@ -703,6 +709,9 @@ border: 1px solid #444;
 
 .dashboard-page .list-group.list-group-root > .list-group > .list-group-item {
   padding-left: 30px; }
+
+.dashboard-page .list-group.list-group-root > .list-group > .list-group > .list-group-item {
+  padding-left: 45px; }
 
 .dashboard-page .list-group.list-group-root > .list-group > .list-group > .list-group-item {
   padding-left: 45px; }
@@ -962,12 +971,15 @@ textarea {
     width: 56px; }
   .portalWrap .panel-heading .col-sm-3 {
     min-height: 60px; }
+  .portalWrap .panel-heading .col-sm-9 {
+    border-bottom: 3px solid #38B9A1;
+    width: 50%; }
 
 .portalWrap .panel-body {
   padding: 0px;
   padding-top: 20px;
   padding-bottom: 20px;
-  border-top: 1px solid #69b2e5;
+  /*border-top: 1px solid $blue;*/
   line-height: 1.1;
   font-size: 13.5px;
   color: rgba(0, 0, 0, 0.4);
@@ -1008,10 +1020,13 @@ textarea {
   padding-top: 10px; }
 
 .dashboard-page h2, .transferTransaction-page h2, h2 {
-  color: rgba(0, 0, 0, 0.3);
-  font-size: 55px;
-  font-weight: 100;
-  text-align: left; }
+  /*font-size: 55px;
+    font-weight: 100;*/
+  text-align: left;
+  /*color: rgba(0, 0, 0, 0.3);*/
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 20px; }
 
 .dashboard-page .updates {
   max-width: 400px; }
