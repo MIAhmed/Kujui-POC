@@ -43,7 +43,7 @@
         </li>
         <li ng-show="$ctrl._DataBridge.accountData.meta && $ctrl._DataBridge.accountData.account"><a ui-sref-active="active" ui-sref="app.account" show-authed="true">Account</a></li>
         <li ng-show="$ctrl._Wallet.currentAccount.label"><a>{{ $ctrl._Wallet.currentAccount.label }}</a></li>
-        <li><a style="outline:0;cursor:pointer;border-right:none;" show-authed="true" ng-click="$ctrl.logout()"><i class="fa fa-sign-out"></i> <small><b>{{$ctrl.walletName}}</small></b></a></li>
+        <li><a style="outline:0;cursor:pointer;border-right:none;" show-authed="true" ng-click="$ctrl.logout()"><i class="fa fa-sign-out"></i> <small><b>Log Out<!--{{$ctrl.walletName}}--></b></small></a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

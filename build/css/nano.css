@@ -172,7 +172,8 @@ fieldset[disabled] .btn-default.focus {
   /*background-color: pink;*/ }
 
 .navbar-nav li a {
-  color: black !important;
+  color: #38B9A1 !important;
+  /*color: black !important;*/
   font-weight: 500; }
 
 .navbar-nav li a.active {
@@ -320,10 +321,10 @@ fieldset[disabled] .btn-default.focus {
   padding: 0px 0px; }
 
 select {
-  border-radius: 0px !important; }
+  /*border-radius: 0px !important;*/ }
 
 .form-control {
-  border-radius: 0px; }
+  /*border-radius: 0px;*/ }
 
 .btn-success {
   /*background-color: transparent;*/
@@ -333,7 +334,8 @@ select {
   padding-top: 10px;
   padding-bottom: 10px;
   margin-bottom: 20px;
-  background-color: #FEF0DB; }
+  background-color: #FEF0DB;
+  border-radius: 30px; }
 
 .login-page .demo p {
   margin: 0px; }
@@ -343,19 +345,22 @@ select {
   margin: 0 auto; }
 
 .login-page .btn-success {
-  background-color: #5cb85c;
-  border-radius: 0px; }
+  /*background-color: #5cb85c;*/
+  background-color: #6BA4B8;
+  border-radius: 20px; }
 
 .login-page .banner-left h2 {
   margin-top: 10px; }
 
 .login-page .btn-import {
-  background-color: #dfa82f;
+  background-color: #38B9A1;
   border-radius: 0px;
-  color: white; }
+  color: white;
+  border-radius: 20px; }
 
 .login-page .btn-import:hover {
-  background-color: #daa022; }
+  background-color: #1b8370;
+  border-radius: 20px; }
 
 .login-page .fileUpload input.upload {
   padding: 10px 16px; }
@@ -364,7 +369,23 @@ select {
   margin-top: 150px; }
 
 .login-page h1 {
-  font-weight: bold; }
+  font-weight: bold;
+  font-size: 60px; }
+
+.login-page input[type=password], .login-page select {
+  border-radius: 20px; }
+
+@media (min-width: 993px) {
+  .login-page .container {
+    width: 600px; } }
+
+@media (max-width: 992px) and (min-width: 768px) {
+  .login-page .container {
+    width: 400px; } }
+
+@media (max-width: 767px) and (min-width: 300px) {
+  .login-page .container {
+    width: 300px; } }
 
 .signup-page .banner-left h2 {
   margin-top: 10px; }
