@@ -492,7 +492,7 @@ function EnglishProvider($translateProvider) {
         LOGIN_UPGRADE_MESSAGE: 'Selected wallet needs an upgrade. This action will generate a child public key and add it into your main account. Download of updated wallet will be automatically triggered at success, you <b><u>must</u></b> download it !',
         LOGIN_UPGRADE_BUTTON: 'Upgrade wallet',
         LOGIN_IMPORT_BUTTON: 'Import Wallet',
-        LOGIN_SELECT_WALLET: 'Select a wallet in local storage',
+        LOGIN_SELECT_WALLET: 'Select a wallet from your local storage',
         LOGIN_LOGIN_BUTTON: 'Sign In',
 
         // SIGNUP MODULE
