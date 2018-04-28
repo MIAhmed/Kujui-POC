@@ -102,7 +102,7 @@ gulp.task('views', function() {
 
 // This task is used for building production ready
 // minified JS/CSS files into the dist/ folder
-/*gulp.task('build', ['html', 'browserify'], function() {
+gulp.task('build', ['html', 'browserify'], function() {
   var html = gulp.src("build/index.html")
                  .pipe(gulp.dest('./dist/'));
 
@@ -111,7 +111,7 @@ gulp.task('views', function() {
                .pipe(gulp.dest('./dist/'));
 
   return merge(html,js);
-});*/
+});
 
 // Run Tasks
 gulp.task('default', ['html', 'js', 'sass', 'images', 'browserify', 'tests', 'browserifyTests'], function() {
@@ -119,11 +119,12 @@ gulp.task('default', ['html', 'js', 'sass', 'images', 'browserify', 'tests', 'br
   // Uncomment below for dev mode (watch and build as you change the code)
   browserSync.init(['./build/**/**.**'], {
     server: "./build",
-    port: 4000,
+    port: process.env.PORT || 4000,
     notify: false,
     ui: {
       port: 4001
-    }
+    },
+	open:false
   });
   gulp.watch("src/start.html", ['html']);
   gulp.watch("src/sass/**/*.scss", ['sass']);
@@ -131,3 +132,18 @@ gulp.task('default', ['html', 'js', 'sass', 'images', 'browserify', 'tests', 'br
   gulp.watch(jsFiles, ['browserify']);
 
 });
+
+gulp.task('serve',  ['html', 'js', 'sass', 'images'] , function() {
+  browserSync({
+    server: {
+      baseDir: './build"'
+    },
+    port: process.env.PORT || 5000
+  });
+	gulp.watch("src/start.html", ['html']);
+  gulp.watch("src/sass/**/*.scss", ['sass']);
+  gulp.watch(viewFiles, ['views']);
+  gulp.watch(jsFiles, ['browserify']);
+  gulp.watch(['*.html', 'css/*.css', 'js/*.js', 'views/*.html', 'template/*.html', './*.html'], {cwd: 'app'}, reload);
+});
+
