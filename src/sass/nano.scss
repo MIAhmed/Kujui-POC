@@ -281,25 +281,30 @@ fieldset[disabled] .btn-default.focus {
     text-align: center;
 }
 
-.home-page .banner h1{
-		color: #fff;
-		display: table;
-		margin: 0 auto 30px;
-		padding: 0 15px 30px;
-		font-size: 24px;
-		border-bottom: 1px solid rgba(255,255,255,0.1);
-		letter-spacing: 5px;
+.home-page .banner .div_heading1 img {
+    color: #2A363B;
+    width:325px;
+    margin: 0 auto 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-.home-page .banner h2{
-	margin: 0 auto;
-	color: #fff;
-	font-size: 20px;
-	display: table;
-	text-transform: uppercase;
-	letter-spacing: 5px;
-	text-align: center;
-	margin-bottom: 50px;
+.home-page .banner h1 {
+    color: #2A363B;
+    font-family: 'Lucida Sans', sans-serif;
+    margin: 0 auto 30px;
+    padding: 0 15px 30px;
+    font-size: 75px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    
+}
+
+.home-page .banner h2 {
+    margin: 80px auto;
+    color: black;
+    font-size: 48px;
+    display: table;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
 .home-page .foot{
@@ -316,11 +321,11 @@ fieldset[disabled] .btn-default.focus {
 	color: #fff;
 }
 
-@media screen and(min-width: 992px) {
+/*@media screen and(min-width: 992px) {
 	.home-page .banner h2 {
 		font-size: 50px;
 	}
-}
+}*/
 
 @media screen and (max-width:992px){
 	.home-page .process{
@@ -343,24 +348,23 @@ fieldset[disabled] .btn-default.focus {
 	height: 600px;
 }
 
-.landstead-button{
-	font-weight:300;
-	margin: 45px auto 0;
-	font-size: 14px;
-	padding: 12px 30px;
-	border: 1px solid #fcd088;
-	color: #fcd088;
-	text-transform: uppercase;
-	letter-spacing: 4px;
-	background-color: transparent !important;
-	-webkit-transition: all 0.3s;
-	transition: all 0.3s;
-	cursor: pointer;
+.landstead-button {
+    /*font-weight: 300;*/
+    margin: 45px auto 0;
+    font-size: 18px;
+    padding: 18px 100px;
+    color: white;
+    
+    background-color: #2A363B !important;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    cursor: pointer;
+    border-radius: 35px;
 }
-.home-page .landstead-button:hover{
-	background-color: #fcd088 !important;
-	text-decoration: none;
-	color: #333;
+.home-page .landstead-button:hover {
+    background-color: #0c0d0d !important;
+    text-decoration: none;
+    color: white;
 }
 
 .home-page .process, .home-page .about{
@@ -403,17 +407,19 @@ select {
     padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 20px;
-    background-color: #FEF0DB;
+    /*background-color: #FEF0DB;*/
     border-radius: 30px;
 }
 
-.login-page .demo p{
-	margin: 0px;
-    
+.login-page .demo p {
+    margin: 0px;
+    font-size: 20px;
+    color: #2A363B;
+    font-family: 'Lucida Sans';
 }
 .login-page .center{
 	display: block;
-	margin: 0 auto;
+	margin: 20px auto;
 }
 
 .login-page .btn-success {
@@ -422,20 +428,33 @@ select {
     border-radius: 20px;
 }
 
+.login-page .btn-signin {
+    background-color: #2A363B;
+    border-radius: 30px;
+    color: white;
+    width: 233px;
+    height:56px;
+}
+
+.login-page .btn-signin:hover {
+    background-color: #111314;
+    color: white;
+}
+
+
 .login-page .banner-left h2 {
 	margin-top: 10px;
 }
 
 .login-page .btn-import {
     background-color: #38B9A1;
-    border-radius: 0px;
     color: white;
-    border-radius: 20px;
+    border-radius: 30px;
+    padding: 15px 60px;
 }
 
 .login-page .btn-import:hover {
     background-color: #1b8370;
-    border-radius: 20px;
 }
 
 .login-page .fileUpload input.upload {
@@ -451,27 +470,35 @@ select {
     font-size: 60px;
 }
 
+.login-page  .div_heading1 img {
+    color: #2A363B;
+    width: 325px;
+    margin: 0 auto 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
 .login-page input[type=password], .login-page select {
     border-radius: 20px;
+    border: solid 3px rgba(42, 54, 59, 0.6);
 }
 
 
 
 @media (min-width: 993px) {
     .login-page .container {
-        width: 800px;
+        width: 750px;
     }
 }
 
 @media (max-width: 992px) and (min-width: 768px) {
     .login-page .container {
-        width: 500px;
+        width: 450px;
     }
 }
 
 @media ( max-width: 767px) and (min-width: 300px) {
     .login-page .container {
-        width: 350px;
+        width: 320px;
     }
 }
 

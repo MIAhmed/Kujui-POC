@@ -1,6 +1,6 @@
 const AppConstants = {
     //Application name
-    appName: 'Landstead',
+    appName: 'Kujui',
 
     version: 'BETA 1.2.2',
 
